@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Lab4 - Exercise 1</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+    // Write your JavaScript code here
+
+    // Variable Decleration
+    let myvar1 = "Hi!";
+    console.log(myvar1);
+    myvar1 = "Hello!";
+    console.log(myvar1);
+    const myvar2 = "ENSF 381";
+    console.log(myvar2);
+    // myvar2 = "Hi!";
+    // console.log(myvar2);
+    let myvar3 = "Lab 04";
+    console.log(myvar3);
+
+
+    // String Operations
+    let string1 = "Hello, World!";
+    let string2 = "JavaScript is fun!";
+    
+    let len = string1.length;
+    console.log(len);
+
+    let newString = string1 + ' ' + string2;
+    console.log(newString);
+
+    let bestString = string2.replace("fun", "awesome");
+    console.log(bestString);
+
+    // String Templates
+
+    let name = "Alice";
+    let age = 25;
+
+    let greeting = `My name is ${name} and I am ${age} years old.`;
+    console.log(greeting);
+
+    // Working with Dates
+
+    const todaysDate = new Date("2025, February, 14");
+    console.log(todaysDate);
+
+    console.log(todaysDate.getFullYear());
+    console.log((todaysDate.getMonth() + 1));
+    
+    let today = todaysDate.getDay();
+    console.log(today);
+
+
+    let myDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    console.log(myDays[today]);
+
+    </script>
+
+
+</body>
+</html>
