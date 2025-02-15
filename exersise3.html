@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 - Exercise 1</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+        //2 
+        let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"];
+
+        //3
+        let classRosterString = classRoster.toString();
+        console.log(classRosterString);
+        
+        //4
+        console.log(classRoster);
+
+        //5
+        classRoster.push("Fiona", "Nancy");
+
+        //6
+        classRoster.shift();
+
+        //7
+        console.log(classRoster);
+
+        //8
+        let len = classRoster.length; 
+        console.log(len);
+
+        // Objects with Nested Structures
+
+        //1 
+        let classInfo = {
+            className: "ENSF381: Full-Stack Web Development", 
+            instructor: "Dr. Smith",
+            students: classRoster,
+            details: {
+                semester: "Winter",
+                year: 2025
+            }
+        };
+
+        //2
+        classInfo.schedule = ["Monday", "Wednesday", "Friday"];
+        
+        //3
+        classInfo.instructor = "Dr. Deb"; 
+
+        //4
+        console.log(classInfo.className);
+        console.log(classInfo.instructor);
+        console.log(classInfo.students);
+    
+        //5
+        console.log(classInfo.details.semester);
+
+        //6
+        console.log(classInfo);
+
+        //7
+        let { className: name, students: people} = classInfo;
+        console.log(name);
+        console.log(people);
+
+        //8
+        let { details:{semester: sem, year: currentYear} }= classInfo;
+        console.log(sem);
+        console.log(currentYear);
+
+        //9
+        const [student1] = classRoster;
+        const [,student2] = classRoster;
+
+        //10
+        const [, , ...remainingStudents] = classRoster;
+
+        //11
+        console.log(student1);
+        console.log(student2);
+        console.log(remainingStudents);
+        
+    </script>
+
+</body>
+</html>
