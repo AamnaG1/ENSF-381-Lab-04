@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 – Exercise 1</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+
+        // Declaring Functions
+
+        //1
+        // function add(x,y) {
+        //     return x + y; 
+        // };
+
+        // //2
+        // function subtract(x,y) {
+        //     return x - y; 
+        // };
+
+        // //3
+        // console.log(add(5,4))
+        // console.log(subtract(10,8))
+
+        // Using Default Parameters 
+
+        //1
+
+        // function add(x,y=2) {
+        //     return x + y; 
+        // };
+
+        // //2
+
+        // function subtract(x,y=1) {
+        //     return x - y; 
+        // };
+
+        //3
+        // With one argument only 
+
+        // console.log(add(5));
+        // console.log(subtract(10));
+        /* Ommiting the second argument will use the default argument as the second parameter.
+        Therefore, add(5) would result in the addition of 5 and 2, resulting in 7.*/
+
+        //With two arguments
+        // console.log(add(5,4));
+        // console.log(subtract(10,8));
+        /* Observed that even though a default value was assigned in the function,
+        assigning a second argument will override the default argument */
+
+
+        // Implementing Arrow Functions
+
+        //1
+        let add = (x,y) => x + y;
+        let subtract = (x,y) => x - y; 
+
+        //2 
+
+        let multiply = (x,y) => x * y;
+        let divide = (x,y) => {
+            if(y==0) {
+               return "Error! Cannot divide by zero.";
+            }
+            return x/y;
+        };
+
+        console.log(add(5,4));
+        console.log(subtract(10,8));
+        console.log(multiply(5,4));
+        console.log(divide(10,8));
+        console.log(divide(10,0));
+
+        // Understanding Callback Functions 
+
+        //1 + 2
+
+        function calculator(x,y, callback) {
+            return callback(x,y);
+        };
+
+        // 3
+        console.log(calculator(5,10,add));
+        console.log(calculator(3,8,multiply));
+
+    </script>
+</body>
+</html>
